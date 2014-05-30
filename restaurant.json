@@ -1,0 +1,20 @@
+[
+    {
+        "id": 0,
+        "name": "First Pizza Pronto Restaurant",
+        "address": "71A Aripita Avenue Woodbrook",
+        "city": "Port of spain"
+    },
+    {
+        "id": 1,
+        "name": "Second Pizza Pronto Restaurant",
+        "address": "71A Aripita Avenue Woodbrook",
+        "city": "Port of spain"
+    },
+    {
+        "id": 2,
+        "name": "Third Pizza Pronto Restaurant",
+        "address": "71A Aripita Avenue Woodbrook",
+        "city": "Port of spain"
+    }
+]

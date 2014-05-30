@@ -1,0 +1,10 @@
+{
+  "name": "SAP",
+  "description": "an example of using Express",
+  "private" : true,
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "3.x"
+  },
+  "main" : "app"
+}
