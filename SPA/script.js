@@ -7,19 +7,19 @@
 
 			// route for the home page
 			.when('/', {
-				templateUrl : 'SAP/pages/home.html',
+				templateUrl : 'SPA/pages/home.html',
 				controller  : 'mainController'
 			})
 
 			// route for the about page
 			.when('/about/:restId', {
-				templateUrl : 'SAP/pages/about.html',
+				templateUrl : 'SPA/pages/about.html',
 				controller  : 'aboutController'
 			})
 
 			// route for the contact page
 			.when('/contact', {
-				templateUrl : 'SAP/pages/contact.html',
+				templateUrl : 'SPA/pages/contact.html',
 				controller  : 'contactController'
 			});
 	});
