@@ -1,8 +1,14 @@
-<div class="jumbotron text-center">
+<div>
+    <h2>{{message.name}}</h2>
+</div>
+<ul class="nav navbar-nav navbar-right">
+	<li><a href="/"><i class="fa fa-shield"></i> About</a><br>
+</ul>
+<div style="clear:both"></div>
+
+<div>
 	<code>{{ message.name }}</code>
-	<li>
 		<h2>{{ message.name }}</h2>
 		{{ message.address }},{{ message.city }}<br>
 		{{ message.phone }}
-	</li>
 </div>

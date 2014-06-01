@@ -1,16 +1,23 @@
-<div ng-repeat="message in messages" class="jumbotron text-center">
-	<a href="#about/{{$index}}"><i class="fa fa-shield"></i> About</a><br>
-	<code>{{message.name}}</code><br>
-	<b>Best Italian Sellers</b><br>
-	<code>{{message.best.name}}</code><br>
-	<code>{{message.best.ingredients}}</code><br>
+<div ng-repeat="message in messages">
+<div>
+    <h2>{{message.name}}</h2>
+</div>
+<ul class="nav navbar-nav navbar-right">
+	<li><a href="#about/{{$index}}"><i class="fa fa-shield"></i> About</a><br>
+</ul>
+<div style="clear:both"></div>
+
+	
+	<h2>Best Italian Sellers</h2>
+	<h3>{{message.best.name}}</h3>
+	<p>{{message.best.ingredients}}</p>
 	<code>{{message.best.price}}</code><br>
-	<b>Pizza</b><br>
-	<code>{{message.pizza.name}}</code><br>
-	<code>{{message.pizza.ingredients}}</code><br>
+	<h2>Pizza</h2>
+	<h3>{{message.pizza.name}}</h2>
+	<p>{{message.pizza.ingredients}}</p>
 	<code>{{message.pizza.price}}</code><br>
-	<b>Pasta</b><br>
-	<code>{{message.pasta.name}}</code><br>
-	<code>{{message.pasta.ingredients}}</code><br>
+	<h2>Pasta</h2>
+	<h3>{{message.pasta.name}}</h3>
+	<p>{{message.pasta.ingredients}}</p>
 	<code>{{message.pasta.price}}</code>
 </div>
