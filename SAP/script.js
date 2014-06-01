@@ -12,7 +12,7 @@
 			})
 
 			// route for the about page
-			.when('/about', {
+			.when('/about/:restId', {
 				templateUrl : 'SAP/pages/about.html',
 				controller  : 'aboutController'
 			})
@@ -30,7 +30,7 @@
 	  $http({method: 'GET', url: 'http://localhost:3412/rest'}).
 	    success(function(data, status, headers, config) {
 
-	      $scope.message = data;
+	      $scope.messages = data;
 
 	    }).
 	    error(function(data, status, headers, config) {
@@ -38,8 +38,8 @@
 	    });
 	});
 
-	scotchApp.controller('aboutController', function($scope,$http) {
-	  $http({method: 'GET', url: 'http://localhost:3412/rest/0'}).
+	scotchApp.controller('aboutController', function($scope,$http,$routeParams) {
+	  $http({method: 'GET', url: 'http://localhost:3412/rest/'+$routeParams.restId}).
 	    success(function(data, status, headers, config) {
 
 	      $scope.message = data;
@@ -54,7 +54,7 @@
 	  $http({method: 'GET', url: 'http://localhost:3412/rest/1'}).
 	    success(function(data, status, headers, config) {
 
-	      $scope.message = data;
+	      $scope.messages = data;
 
 	    }).
 	    error(function(data, status, headers, config) {

@@ -3,18 +3,22 @@
         "id": 0,
         "name": "First Pizza Pronto Restaurant",
         "address": "71A Aripita Avenue Woodbrook",
-        "city": "Port of spain"
-    },
-    {
-        "id": 1,
-        "name": "Second Pizza Pronto Restaurant",
-        "address": "71A Aripita Avenue Woodbrook",
-        "city": "Port of spain"
-    },
-    {
-        "id": 2,
-        "name": "Third Pizza Pronto Restaurant",
-        "address": "71A Aripita Avenue Woodbrook",
-        "city": "Port of spain"
+        "city": "Port of spain",
+        "phone": "+40 743 105 932",
+        "best": {
+            "name":"pizza 1",
+            "ingredients":"one, two, three",
+            "price":"9.00 USD"
+        },
+        "pizza": {
+            "name":"Pizza Prosciuto",
+            "ingredients":"one one one",
+            "price":"10.00 USD"
+        },
+        "pasta": {
+            "name": "Spaghetti All Arabiatello",
+            "ingredients": "pasta faina",
+            "price": "8.00 USD"
+        }
     }
 ]
