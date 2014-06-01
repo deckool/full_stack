@@ -20,7 +20,6 @@ app.use(express.bodyParser());
 
 app.get('/', function(req,res) {
   res.sendfile('SPA/index.html');
- //res.json(obj);
 });
 
 app.get('/rest', function(req, res) {
