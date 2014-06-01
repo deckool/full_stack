@@ -6,24 +6,33 @@
 
 
 <div style="clear:both"></div>
-		<h2>Best Italian Sellers</h2>
+		<h2 class="dash">Best Italian Sellers</h2>
 	<div class="best" ng-repeat="(key, value) in message.best">
-		<h3>{{value.name}}</h3>
-		<code>Ingredients: {{value.ingredients}}</code>
-		<code style="float:right">Price: {{value.price}}</code>
+		<blockquote>
+			<h3>{{value.name}}</h3>
+			<p>Ingredients: {{value.ingredients}}<br>
+			<span style="float:right">Price: {{value.price}}</span></p>
+		</blockquote>
+		<br>
 	</div>
 
+		<h2 class="dash">Pizza</h2>
 	<div class="pizza" ng-repeat="(key, value) in message.pizza">
-		<h2>Pizza</h2>
-		<h3>{{value.name}}</h2>
-		<code>Ingredients: {{value.ingredients}}</code>
-		<code style="float:right">Price: {{value.price}}</code>
+		<blockquote>
+			<h3>{{value.name}}</h2>
+			<p>Ingredients: {{value.ingredients}}<br>
+			<span style="float:right">Price: {{value.price}}</span></p>
+		</blockquote>
+		<br>
 	</div>
 
+		<h2 class="dash">Pasta</h2>
 	<div class="pasta" ng-repeat="(key, value) in message.pasta">
-		<h2>Pasta</h2>
-		<h3>{{value.name}}</h3>
-		<code>Ingredients: {{value.ingredients}}</code>
-		<code style="float:right">Price: {{value.price}}</code>
+		<blockquote>
+			<h3>{{value.name}}</h3>
+			<p>Ingredients: {{value.ingredients}}</br>
+			<span style="float:right">Price: {{value.price}}</span></p>
+		</blockquote>
+		<br>
 	</div>
 </div>

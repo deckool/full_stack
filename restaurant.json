@@ -1,7 +1,7 @@
 [
   {
     "id": 0,
-    "name": "First Pizza Pronto Restaurant",
+    "name": "Pizza Pronto Restaurant",
     "address": "71A Aripita Avenue Woodbrook",
     "city": "Port of spain",
     "phone": "+xx xxx xxx xxx",
@@ -22,6 +22,11 @@
         "name": "Pizza Prosciuto",
         "ingredients": "one one one",
         "price": "10.00 USD"
+      },
+      {
+        "name":"Pizza Margherita",
+        "ingredients":"sos, mozzarella, rosii, busuioc",
+        "price": "less"
       }
     ],
     "pasta": [
