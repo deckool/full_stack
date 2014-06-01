@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <!-- define angular app -->
 <html ng-app="scotchApp">
-<style>
-h1,h2,h3 {
-  background:#000;
-  color:white;
-}
-a {
-  text-decoration:none;
-}
-</style>
 <head>
   <!-- SCROLLS -->
 <!--  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />-->
+  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.17.1/build/cssreset/cssreset-min.css">
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
 
   <!-- SPELLS -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular-route.js"></script>
   <script src="SPA/script.js"></script>
+  <style>
+    h2 {
+      text-align:center;
+    }
+    h2.left{
+      display:inline;
+    }
+    a.right {
+      float:right;
+    }
+    div.head{
+      display:block;
+      padding:10px 2px;
+      border-bottom:1px dashed rgba(0,0,0,0.3);
+      margin-bottom: 5px;
+    }
+  </style>
 </head>
 
 <!-- define angular controller -->

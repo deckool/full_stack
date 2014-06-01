@@ -1,12 +1,9 @@
 <div ng-repeat="message in messages">
-<div>
-    <h2>{{message.name}}</h2>
+<div class="head">
+    <h2 class="left">{{message.name}}</h2>
+	<a class="right" href="#about/{{$index}}"><i class="fa fa-shield"></i> About</a>
 </div>
 
-<a href="#about/{{$index}}">
-	<i class="fa fa-shield"></i> About
-</a>
-<br>
 
 <div style="clear:both"></div>
 		<h2>Best Italian Sellers</h2>
