@@ -15,11 +15,11 @@ function handleFile(err, data) {
     // You can now play with your datas
 }
 
-app.use("/SAP", express.static(__dirname + '/SAP'));
+app.use("/SPA", express.static(__dirname + '/SPA'));
 app.use(express.bodyParser());
 
 app.get('/', function(req,res) {
-  res.sendfile('SAP/index.html');
+  res.sendfile('SPA/index.html');
  //res.json(obj);
 });
 
