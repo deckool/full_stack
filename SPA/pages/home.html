@@ -2,22 +2,25 @@
 <div>
     <h2>{{message.name}}</h2>
 </div>
-<ul class="nav navbar-nav navbar-right">
-	<li><a href="#about/{{$index}}"><i class="fa fa-shield"></i> About</a><br>
-</ul>
-<div style="clear:both"></div>
 
-	
+<a href="#about/{{$index}}">
+	<i class="fa fa-shield"></i> About
+</a>
+<br>
+
+<div style="clear:both"></div>
 	<h2>Best Italian Sellers</h2>
 	<h3>{{message.best.name}}</h3>
-	<p>{{message.best.ingredients}}</p>
-	<code>{{message.best.price}}</code><br>
+	<code>Ingredients: {{message.best.ingredients}}</code>
+	<code style="float:right">Price: {{message.best.price}}</code><br>
+
 	<h2>Pizza</h2>
 	<h3>{{message.pizza.name}}</h2>
-	<p>{{message.pizza.ingredients}}</p>
-	<code>{{message.pizza.price}}</code><br>
+	<code>Ingredients: {{message.pizza.ingredients}}</code>
+	<code style="float:right">Price: {{message.pizza.price}}</code><br>
+
 	<h2>Pasta</h2>
 	<h3>{{message.pasta.name}}</h3>
-	<p>{{message.pasta.ingredients}}</p>
-	<code>{{message.pasta.price}}</code>
+	<code>Ingredients: {{message.pasta.ingredients}}</code>
+	<code style="float:right">Price: {{message.pasta.price}}</code>
 </div>

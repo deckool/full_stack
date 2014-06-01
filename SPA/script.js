@@ -18,10 +18,10 @@
 			})
 
 			// route for the contact page
-			.when('/contact', {
+/*			.when('/contact', {
 				templateUrl : 'SPA/pages/contact.html',
 				controller  : 'contactController'
-			});
+			});*/
 	});
 
 	// create the controller and inject Angular's $scope
@@ -39,7 +39,7 @@
 	});
 
 	scotchApp.controller('aboutController', function($scope,$http,$routeParams) {
-	  $http({method: 'GET', url: 'http://localhost:3412/rest/'+$routeParams.restId}).
+	  $http({method: 'GET', url: 'http://localhost:3412/rest/'+ $routeParams.restId}).
 	    success(function(data, status, headers, config) {
 
 	      $scope.message = data;
@@ -50,7 +50,7 @@
 	    });
 	});
 
-	scotchApp.controller('contactController', function($scope,$http) {
+/*	scotchApp.controller('contactController', function($scope,$http) {
 	  $http({method: 'GET', url: 'http://localhost:3412/rest/1'}).
 	    success(function(data, status, headers, config) {
 
@@ -60,4 +60,4 @@
 	    error(function(data, status, headers, config) {
 
 	    });
-	});
+	});*/
