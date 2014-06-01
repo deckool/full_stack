@@ -9,18 +9,24 @@
 <br>
 
 <div style="clear:both"></div>
-	<h2>Best Italian Sellers</h2>
-	<h3>{{message.best.name}}</h3>
-	<code>Ingredients: {{message.best.ingredients}}</code>
-	<code style="float:right">Price: {{message.best.price}}</code><br>
+		<h2>Best Italian Sellers</h2>
+	<div class="best" ng-repeat="(key, value) in message.best">
+		<h3>{{value.name}}</h3>
+		<code>Ingredients: {{value.ingredients}}</code>
+		<code style="float:right">Price: {{value.price}}</code>
+	</div>
 
-	<h2>Pizza</h2>
-	<h3>{{message.pizza.name}}</h2>
-	<code>Ingredients: {{message.pizza.ingredients}}</code>
-	<code style="float:right">Price: {{message.pizza.price}}</code><br>
+	<div class="pizza" ng-repeat="(key, value) in message.pizza">
+		<h2>Pizza</h2>
+		<h3>{{value.name}}</h2>
+		<code>Ingredients: {{value.ingredients}}</code>
+		<code style="float:right">Price: {{value.price}}</code>
+	</div>
 
-	<h2>Pasta</h2>
-	<h3>{{message.pasta.name}}</h3>
-	<code>Ingredients: {{message.pasta.ingredients}}</code>
-	<code style="float:right">Price: {{message.pasta.price}}</code>
+	<div class="pasta" ng-repeat="(key, value) in message.pasta">
+		<h2>Pasta</h2>
+		<h3>{{value.name}}</h3>
+		<code>Ingredients: {{value.ingredients}}</code>
+		<code style="float:right">Price: {{value.price}}</code>
+	</div>
 </div>

@@ -1,24 +1,35 @@
 [
-    {
-        "id": 0,
-        "name": "First Pizza Pronto Restaurant",
-        "address": "71A Aripita Avenue Woodbrook",
-        "city": "Port of spain",
-        "phone": "+xx xxx xxx xxx",
-        "best": {
-            "name":"pizza 1",
-            "ingredients":"one, two, three",
-            "price":"9.00 USD"
-        },
-        "pizza": {
-            "name":"Pizza Prosciuto",
-            "ingredients":"one one one",
-            "price":"10.00 USD"
-        },
-        "pasta": {
-            "name": "Spaghetti All Arabiatello",
-            "ingredients": "pasta faina",
-            "price": "8.00 USD"
-        }
-    }
+  {
+    "id": 0,
+    "name": "First Pizza Pronto Restaurant",
+    "address": "71A Aripita Avenue Woodbrook",
+    "city": "Port of spain",
+    "phone": "+xx xxx xxx xxx",
+    "best": [
+      {
+        "name": "Pizza Margherita",
+        "ingredients": "tomato sauce, mozzarella",
+        "price": "9.00 USD"
+      },
+      {
+        "name": "Penne Alla Siciliana",
+        "ingredients": "pasta with aubergines, mozzarella and tomato sauce",
+        "price": "8.00 USD"
+      }
+    ],
+    "pizza": [
+      {
+        "name": "Pizza Prosciuto",
+        "ingredients": "one one one",
+        "price": "10.00 USD"
+      }
+    ],
+    "pasta": [
+      {
+        "name": "Spaghetti All Arabiatello",
+        "ingredients": "pasta faina",
+        "price": "8.00 USD"
+      }
+    ]
+  }
 ]
