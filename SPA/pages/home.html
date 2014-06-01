@@ -1,4 +1,16 @@
-<div class="jumbotron text-center">
-	<code>Home</code>
-	<li ng-repeat="message in messages"><a href="#about/{{ $index }}">{{ message.name }}</a><br>{{ message.address }},{{ message.city }}<br>{{ message.phone }}</li>
+<div ng-repeat="message in messages" class="jumbotron text-center">
+	<a href="#about/{{$index}}"><i class="fa fa-shield"></i> About</a><br>
+	<code>{{message.name}}</code><br>
+	<b>Best Italian Sellers</b><br>
+	<code>{{message.best.name}}</code><br>
+	<code>{{message.best.ingredients}}</code><br>
+	<code>{{message.best.price}}</code><br>
+	<b>Pizza</b><br>
+	<code>{{message.pizza.name}}</code><br>
+	<code>{{message.pizza.ingredients}}</code><br>
+	<code>{{message.pizza.price}}</code><br>
+	<b>Pasta</b><br>
+	<code>{{message.pasta.name}}</code><br>
+	<code>{{message.pasta.ingredients}}</code><br>
+	<code>{{message.pasta.price}}</code>
 </div>

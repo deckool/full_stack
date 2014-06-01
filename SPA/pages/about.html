@@ -1,15 +1,8 @@
 <div class="jumbotron text-center">
-	<code>{{message.name}}</code><br>
-	<b>Best Italian Sellers</b><br>
-	<code>{{message.best.name}}</code><br>
-	<code>{{message.best.ingredients}}</code><br>
-	<code>{{message.best.price}}</code><br>
-	<b>Pizza</b><br>
-	<code>{{message.pizza.name}}</code><br>
-	<code>{{message.pizza.ingredients}}</code><br>
-	<code>{{message.pizza.price}}</code><br>
-	<b>Pasta</b><br>
-	<code>{{message.pasta.name}}</code><br>
-	<code>{{message.pasta.ingredients}}</code><br>
-	<code>{{message.pasta.price}}</code>
+	<code>{{ message.name }}</code>
+	<li>
+		<h2>{{ message.name }}</h2>
+		{{ message.address }},{{ message.city }}<br>
+		{{ message.phone }}
+	</li>
 </div>
