@@ -5,7 +5,8 @@
 
 <div style="clear:both"></div>
 
-<div>
-		{{ message.address }},{{ message.city }}<br>
-		<i class="fa fa-phone"></i> {{ message.phone }}
-</div>
+<address>
+  <strong>{{message.name}} Intl.</strong><br>
+  {{ message.address }},{{ message.city }}<br>
+  <abbr title="Phone"><i class="fa fa-phone"></i></abbr>  {{ message.phone }}
+</address>
