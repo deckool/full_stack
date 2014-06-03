@@ -12,7 +12,8 @@ redis.select(1, function(err,res){
   else {
   redis.setnx('nodejs', restaurants, function(error, result) {
       if (error) res.send('Error: ' + error);
-      else console.log("saved");
+      else if (result === 0) console.log('the key already exist');
+      else console.log('saved');
   });}
 });
 
