@@ -1,19 +1,20 @@
 var express = require('express');
 var app = express();
+// Introducing Redis
+var _redis = require("redis"),
+redis = _redis.createClient();
 
-// Declare variables
-var fs = require('fs'),
-    obj
+var restaurants = '[{"id":0,"name":"Pizza Pronto Restaurant","address":"71A Aripita Avenue Woodbrook","city":"Port of spain","phone":"+xx xxx xxx xxx","best":[{"name":"Pizza Margherita","ingredients":"tomato sauce, mozzarella","price":"9.00 USD"},{"name":"Penne Alla Siciliana","ingredients":"pasta with aubergines, mozzarella and tomato sauce","price":"8.00 USD"}],"pizza":[{"name":"Pizza Prosciuto","ingredients":"one one one","price":"10.00 USD"},{"name":"Pizza Margherita","ingredients":"sos, mozzarella, rosii, busuioc","price":"less"}],"pasta":[{"name":"Spaghetti All Arabiatello","ingredients":"pasta faina","price":"8.00 USD"}]}]';
 
-// Read the file and send to the callback
-fs.readFile(__dirname + '/restaurant.json', handleFile)
-
-// Write the callback function
-function handleFile(err, data) {
-    if (err) throw err
-    obj = JSON.parse(data)
-    // You can now play with your datas
-}
+redis.select(1, function(err,res){
+  // you'll want to check that the select was successful here
+  if(err) return err;
+  else {
+  redis.setnx('nodejs', restaurants, function(error, result) {
+      if (error) res.send('Error: ' + error);
+      else console.log("saved");
+  });}
+});
 
 app.use("/SPA", express.static(__dirname + '/SPA'));
 app.use(express.bodyParser());
@@ -23,48 +24,28 @@ app.get('/', function(req,res) {
 });
 
 app.get('/rest', function(req, res) {
-  res.json(obj);
-});
-
-app.get('/rest/random', function(req, res) {
-  var id = Math.floor(Math.random() * obj.length);
-  var q = obj[id];
-  res.json(q);
+  redis.get('nodejs', function(error, result) {
+      if (error) res.send('Error: '+ error);
+      else {
+        json = JSON.parse(result);
+        res.json(json);
+      }
+  });
 });
 
 app.get('/rest/:id', function(req, res) {
-  if(obj.length <= req.params.id || req.params.id < 0) {
+  redis.get('nodejs', function(error, result) {
+      if (error) res.send('Error: '+ error);
+      else {
+  if(result.length <= req.params.id || req.params.id < 0) {
     res.statusCode = 404;
     return res.send('Error 404: No quote found');
   }
-
-  var q = obj[req.params.id];
-  res.json(q);
+        json = JSON.parse(result);
+        var q = json[req.params.id];
+        res.json(q);
+      }
+  });
 });
-/*
-app.post('/rest', function(req, res) {
-  if(!req.body.hasOwnProperty('author') || !req.body.hasOwnProperty('text')) {
-    res.statusCode = 400;
-    return res.send('Error 400: Post syntax incorrect.');
-  }
-
-  var newQuote = {
-    author : req.body.author,
-    text : req.body.text
-  };
-
-  quotes.push(newQuote);
-  res.json(true);
-});
-
-app.delete('/quote/:id', function(req, res) {
-  if(quotes.length <= req.params.id) {
-    res.statusCode = 404;
-    return res.send('Error 404: No quote found');
-  }
-
-  quotes.splice(req.params.id, 1);
-  res.json(true);
-});*/
 
 app.listen(process.env.PORT || 3412);
