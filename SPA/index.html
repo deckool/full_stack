@@ -1,48 +1,87 @@
-<!DOCTYPE html>
-
-<!-- define angular app -->
-<html ng-app="booksApp">
-
-<head>
-  <!-- SCROLLS -->
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
-
-  <!-- SPELLS -->
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.min.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular-route.js"></script>
-  <script src="SPA/script.js"></script>
-</head>
-
-<!-- define angular controller -->
-<body ng-controller="mainController">
-
-  <nav class="navbar navbar-default">
-    <div class="container">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="/">Angular Routing Example</a>
-      </div>
-
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
-        <li><a href="#about"><i class="fa fa-shield"></i> About</a></li>
-    <!--    <li><a href="#contact"><i class="fa fa-comment"></i> Contact</a></li>-->
-      </ul>
-    </div>
-  </nav>
-
-  <div id="main">
-  
-    <!-- angular templating -->
-		<!-- this is where content will be injected -->
-    <div ng-view></div>
+<html ng-app="ionicApp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     
-  </div>
-  
-  <footer class="text-center">
+    <title>Tabs Example</title>
 
-  </footer>
-  
-</body>
+    <link href="http://code.ionicframework.com/1.0.0-beta.6/css/ionic.css" rel="stylesheet">
+    <script src="http://code.ionicframework.com/1.0.0-beta.6/js/ionic.bundle.js"></script>
+  </head>
 
+  <body>
+    
+    <ion-nav-bar class="nav-title-slide-ios7 bar-positive">
+      <ion-nav-back-button class="button-icon ion-arrow-left-c">
+      </ion-nav-back-button>
+    </ion-nav-bar>
+             
+    <ion-nav-view animation="slide-left-right"></ion-nav-view>
+
+
+    <script id="tabs.html" type="text/ng-template">
+      <ion-tabs class="tabs-icon-top tabs-positive">
+
+        <ion-tab title="Home" icon="ion-home" href="#/tab/home">
+          <ion-nav-view name="home-tab"></ion-nav-view>
+        </ion-tab>
+
+        <ion-tab title="About" icon="ion-ios7-information" ui-sref="tabs.about">
+          <ion-nav-view name="about-tab"></ion-nav-view>
+        </ion-tab>
+
+        <ion-tab title="Contact" icon="ion-ios7-world" ui-sref="tabs.contact">
+          <ion-nav-view name="contact-tab"></ion-nav-view>
+        </ion-tab>
+
+      </ion-tabs>
+    </script>
+
+    <script id="home.html" type="text/ng-template">
+      <ion-view title="Home">
+        <ion-content class="padding">
+          <li ng-repeat="message in messages">
+            <a href="#/tab/facts/{{ $index }}">{{ message.name }}</a>
+            <br>{{ message.author }},{{ message.city }}<br>{{ message.phone }}
+          </li>
+        </ion-content>
+      </ion-view>
+    </script>
+
+    <script id="facts.html" type="text/ng-template">
+      <ion-view title="Facts" class="padding">
+        <ion-content>
+          <p>
+            {{ message }}
+          </p>
+        </ion-content>
+      </ion-view>
+    </script>
+
+    <script id="about.html" type="text/ng-template">
+      <ion-view title="About">
+        <ion-content class="padding">
+{{message.name}}
+        </ion-content>
+      </ion-view>
+    </script>
+
+    <script id="nav-stack.html" type="text/ng-template">
+      <ion-view title="Tab Nav Stack">
+        <ion-content class="padding">
+          <p><img src="http://ionicframework.com/img/diagrams/tabs-nav-stack.png" style="width:100%"></p>
+        </ion-content>
+      </ion-view>
+    </script>
+
+    <script id="contact.html" type="text/ng-template">
+      <ion-view title="Contact">
+        <ion-content>
+          <p>@IonicFramework</p>
+          <p>@DriftyCo</p>
+        </ion-content>
+      </ion-view>
+    </script>
+  <script src="SPA/ang.js"></script>
+  </body>
 </html>
