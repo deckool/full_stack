@@ -19,7 +19,7 @@ app.use(express.bodyParser());
 
 
 app.get('/', checkForMobile, function(req,res) {
-  res.send('desktop edition');
+  res.sendfile('SPA/desktop.html');
   console.log(':)');
 });
 
@@ -43,7 +43,7 @@ app.get('/rest/:id', function(req, res) {
   res.json(q);
 });
 
-app.listen(process.env.PORT || 3412);
+app.listen(process.env.PORT || 8003);
 
 
 // returns true if the caller is a mobile phone (not tablet)
