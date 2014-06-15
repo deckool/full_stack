@@ -56,11 +56,6 @@
       <ion-view title="{{ message.name }}" class="padding">
         <ion-content>
           <div class="list card">
-            <div class="item item-avatar">
-              <img src="https://pbs.twimg.com/profile_images/3564809552/01f9e3e0c05e9a917a3c20b529d8d5b0_400x400.jpeg">
-              <h2>{{ message.author }}</h2>
-              <p>{{ message.phone }}</p>
-            </div>
             <div class="item item-body">
               <img class="full-image" src="{{ message.cover }}">
               <p>
@@ -68,18 +63,11 @@
                 the content is from a card-body consisting of an image and paragraph text. The footer
                 consists of tabs, icons aligned left, within the card-footer.
               </p>
-              <p>
-                <a href="#" class="subdued">1 Like</a>
-                <a href="#" class="subdued">5 Comments</a>
-              </p>
             </div>
-            <div class="item tabs tabs-secondary">
-              <a class="tab-item" href="#/tab/facts/{{ message.id - 1 }}">
-                <i class="icon ion-skip-backward assertive"></i>
-              </a>
-              <a class="tab-item" href="#/tab/facts/{{ message.id + 1}}">
-                <i class="icon ion-skip-forward assertive"></i>
-              </a>
+            <div class="item item-avatar">
+              <img src="https://pbs.twimg.com/profile_images/3564809552/01f9e3e0c05e9a917a3c20b529d8d5b0_400x400.jpeg">
+              <h2>{{ message.author }}</h2>
+              <p>{{ message.phone }}</p>
             </div>
           </div>
         </ion-content>
