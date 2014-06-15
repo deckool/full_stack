@@ -3,7 +3,7 @@
         "id": 0,
         "name": "Book 1",
         "author": "Stanislav Grof",
-        "city": "Port of spain",
+        "cover": "http://www.bethsteffel.com/images/SteffelPrintDesign_f06.gif",
         "phone": "+40 743 105 932",
         "best": [{
             "name":"pizza 1",
@@ -30,7 +30,7 @@
         "id": 1,
         "name": "Second Book",
         "author": "Jean Clemente",
-        "city": "Port of spain",
+        "cover": "http://37.media.tumblr.com/tumblr_lupfgj9s1j1qbycdbo1_500.jpg",
         "phone": "+40 743 105 932",
         "best": [{
             "name":"pizza 1",
@@ -52,7 +52,7 @@
         "id": 2,
         "name": "Third Book",
         "author": "X Dorsay",
-        "city": "Port of spain",
+        "cover": "http://img2.wikia.nocookie.net/__cb20140118054532/disney/images/1/16/More_Jungle_Book_Record_Cover.jpg",
         "phone": "+40 743 105 932",
         "best": [{
             "name":"pizza 1",

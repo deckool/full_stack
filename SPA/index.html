@@ -7,11 +7,12 @@
 
     <link href="http://code.ionicframework.com/1.0.0-beta.6/css/ionic.css" rel="stylesheet">
     <script src="http://code.ionicframework.com/1.0.0-beta.6/js/ionic.bundle.js"></script>
+
   </head>
 
   <body>
     
-    <ion-nav-bar class="nav-title-slide-ios7 bar-positive">
+    <ion-nav-bar class="nav-title-slide-ios7 bar-calm">
       <ion-nav-back-button class="button-icon ion-arrow-left-c">
       </ion-nav-back-button>
     </ion-nav-bar>
@@ -20,9 +21,9 @@
 
 
     <script id="tabs.html" type="text/ng-template">
-      <ion-tabs class="tabs-icon-top tabs-positive">
+      <ion-tabs class="tabs-icon-top tabs-calm">
 
-        <ion-tab title="Home" icon="ion-home" href="#/tab/home">
+        <ion-tab title="Home" icon="ion-home" href="/">
           <ion-nav-view name="home-tab"></ion-nav-view>
         </ion-tab>
 
@@ -40,28 +41,55 @@
     <script id="home.html" type="text/ng-template">
       <ion-view title="Home">
         <ion-content class="padding">
-          <li ng-repeat="message in messages">
-            <a href="#/tab/facts/{{ $index }}">{{ message.name }}</a>
-            <br>{{ message.author }},{{ message.city }}<br>{{ message.phone }}
-          </li>
+          <div ng-repeat="message in messages" class="list">
+            <a class="item item-thumbnail-left" href="#/tab/facts/{{ $index }}">
+              <img src="{{ message.cover }}">
+              <h2>{{ message.name }}</h2>
+              <p>{{ message.author }},{{ message.cover }}<br>{{ message.phone }}</p>
+            </a>
+          </div>
         </ion-content>
       </ion-view>
     </script>
 
     <script id="facts.html" type="text/ng-template">
-      <ion-view title="Facts" class="padding">
+      <ion-view title="{{ message.name }}" class="padding">
         <ion-content>
-          <p>
-            {{ message }}
-          </p>
+          <div class="list card">
+            <div class="item item-avatar">
+              <img src="https://pbs.twimg.com/profile_images/3564809552/01f9e3e0c05e9a917a3c20b529d8d5b0_400x400.jpeg">
+              <h2>{{ message.author }}</h2>
+              <p>{{ message.phone }}</p>
+            </div>
+            <div class="item item-body">
+              <img class="full-image" src="{{ message.cover }}">
+              <p>
+                This is a "Facebook" styled Card. The header is created from a Thumbnail List item,
+                the content is from a card-body consisting of an image and paragraph text. The footer
+                consists of tabs, icons aligned left, within the card-footer.
+              </p>
+              <p>
+                <a href="#" class="subdued">1 Like</a>
+                <a href="#" class="subdued">5 Comments</a>
+              </p>
+            </div>
+            <div class="item tabs tabs-secondary">
+              <a class="tab-item" href="#/tab/facts/{{ message.id - 1 }}">
+                <i class="icon ion-skip-backward assertive"></i>
+              </a>
+              <a class="tab-item" href="#/tab/facts/{{ message.id + 1}}">
+                <i class="icon ion-skip-forward assertive"></i>
+              </a>
+            </div>
+          </div>
         </ion-content>
       </ion-view>
     </script>
 
     <script id="about.html" type="text/ng-template">
-      <ion-view title="About">
+      <ion-view title="About this project">
         <ion-content class="padding">
-{{message.name}}
+            <h1>Bis</h1>
         </ion-content>
       </ion-view>
     </script>
