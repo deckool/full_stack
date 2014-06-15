@@ -1,15 +1,30 @@
 <div class="jumbotron text-center">
 	<code>{{message.name}}</code><br>
 	<b>Best Italian Sellers</b><br>
-	<code>{{message.best.name}}</code><br>
-	<code>{{message.best.ingredients}}</code><br>
-	<code>{{message.best.price}}</code><br>
+	<div class="best" ng-repeat="(key, value) in message.best">
+		<blockquote>
+			<h3>{{value.name}}</h3>
+			<p>Ingredients: {{value.ingredients}}<br>
+			<span style="float:right">Price: {{value.price}}</span></p>
+		</blockquote>
+		<br>
+	</div>
 	<b>Pizza</b><br>
-	<code>{{message.pizza.name}}</code><br>
-	<code>{{message.pizza.ingredients}}</code><br>
-	<code>{{message.pizza.price}}</code><br>
+	<div class="Pizza" ng-repeat="(key, value) in message.pizza">
+		<blockquote>
+			<h3>{{value.name}}</h3>
+			<p>Ingredients: {{value.ingredients}}<br>
+			<span style="float:right">Price: {{value.price}}</span></p>
+		</blockquote>
+		<br>
+	</div>
 	<b>Pasta</b><br>
-	<code>{{message.pasta.name}}</code><br>
-	<code>{{message.pasta.ingredients}}</code><br>
-	<code>{{message.pasta.price}}</code>
+	<div class="Pasta" ng-repeat="(key, value) in message.pasta">
+		<blockquote>
+			<h3>{{value.name}}</h3>
+			<p>Ingredients: {{value.ingredients}}<br>
+			<span style="float:right">Price: {{value.price}}</span></p>
+		</blockquote>
+		<br>
+	</div>
 </div>

@@ -1,8 +1,8 @@
-	// create the module and name it scotchApp
-	var scotchApp = angular.module('scotchApp', ['ngRoute']);
+	// create the module and name it booksApp
+	var booksApp = angular.module('booksApp', ['ngRoute']);
 
 	// configure our routes
-	scotchApp.config(function($routeProvider) {
+	booksApp.config(function($routeProvider) {
 		$routeProvider
 
 			// route for the home page
@@ -25,7 +25,7 @@
 	});
 
 	// create the controller and inject Angular's $scope
-	scotchApp.controller('mainController', function($scope, $http) {
+	booksApp.controller('mainController', function($scope, $http) {
 		// create a message to display in our view
 	  $http({method: 'GET', url: 'http://localhost:3412/rest'}).
 	    success(function(data, status, headers, config) {
@@ -38,7 +38,7 @@
 	    });
 	});
 
-	scotchApp.controller('aboutController', function($scope,$http,$routeParams) {
+	booksApp.controller('aboutController', function($scope,$http,$routeParams) {
 	  $http({method: 'GET', url: 'http://localhost:3412/rest/'+$routeParams.restId}).
 	    success(function(data, status, headers, config) {
 
@@ -50,7 +50,7 @@
 	    });
 	});
 
-	scotchApp.controller('contactController', function($scope,$http) {
+	booksApp.controller('contactController', function($scope,$http) {
 	  $http({method: 'GET', url: 'http://localhost:3412/rest/1'}).
 	    success(function(data, status, headers, config) {
 
