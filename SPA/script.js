@@ -27,7 +27,7 @@
 	// create the controller and inject Angular's $scope
 	booksApp.controller('mainController', function($scope, $http) {
 		// create a message to display in our view
-	  $http({method: 'GET', url: 'http://organicorange.ro:8003/rest'}).
+	  $http({method: 'GET', url: 'http://localhost:8003/rest'}).
 	    success(function(data, status, headers, config) {
 
 	      $scope.messages = data;
@@ -39,7 +39,7 @@
 	});
 
 	booksApp.controller('aboutController', function($scope,$http,$routeParams) {
-	  $http({method: 'GET', url: 'http://organicorange.ro:8003/rest/'+$routeParams.restId}).
+	  $http({method: 'GET', url: 'http://localhost:8003/rest/'+$routeParams.restId}).
 	    success(function(data, status, headers, config) {
 
 	      $scope.message = data;
@@ -51,7 +51,7 @@
 	});
 
 	booksApp.controller('contactController', function($scope,$http) {
-	  $http({method: 'GET', url: 'http://organicorange.ro:8003/rest/1'}).
+	  $http({method: 'GET', url: 'http://localhost:8003/rest/1'}).
 	    success(function(data, status, headers, config) {
 
 	      $scope.messages = data;

@@ -1,4 +1,12 @@
-<div class="jumbotron text-center">
-	<code>Home</code>
-	<li ng-repeat="message in messages"><a href="#about/{{ $index }}">{{ message.name }}</a><br>{{ message.author }},{{ message.city }}<br>{{ message.phone }}</li>
-</div>
+    <div class="col-lg-12">
+      <!--Body content-->
+
+      <ul class="phones">
+        <li ng-repeat="message in messages" class="thumbnail">
+          <a href="#about/{{ $index }}"><img class="thumb" ng-src="{{ message.cover }}"></a>
+          <a href="#about/{{ $index }}">{{ message.name }}</a>
+          <p>{{ message.author }}</p>
+        </li>
+      </ul>
+
+    </div>
