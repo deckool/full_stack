@@ -1,6 +1,10 @@
 /* app css stylesheet */
 
-.phones {
+.navbar-inverse {
+  margin-bottom:15px;
+}
+
+.books {
   list-style: none;
   padding:0;
 }
@@ -12,7 +16,7 @@
   width: 100px;
 }
 
-.phones li {
+.books li {
   clear: both;
   height: 115px;
   padding-top: 15px;

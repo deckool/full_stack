@@ -6,7 +6,7 @@ var fs = require('fs'),
     obj
 
 // Read the file and send to the callback
-fs.readFile(__dirname + '/restaurant.json', handleFile)
+fs.readFile(__dirname + '/books.json', handleFile)
 
 // Write the callback function
 function handleFile(err, data) {
