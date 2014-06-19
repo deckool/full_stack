@@ -1,32 +1,11 @@
+<ol class="breadcrumb">
+  <li><a href="/">Books</a></li>
+  <li class="active">{{message.name}}</li>
+</ol>
 <div class="jumbotron text-center">
-	<code>{{message.name}}</code><br>
+	<h2>{{message.name}}</h2>
+	<img style="margin:0 auto;" class="img-responsive" src="{{message.cover}}"/>
 	<code>{{message.author}}</code><br>
 	<p>{{message.author_description}}</p>
-	<b>Best Italian Sellers</b><br>
-	<div class="best" ng-repeat="(key, value) in message.best">
-		<blockquote>
-			<h3>{{value.name}}</h3>
-			<p>Ingredients: {{value.ingredients}}<br>
-			<span style="float:right">Price: {{value.price}}</span></p>
-		</blockquote>
-		<br>
-	</div>
-	<b>Pizza</b><br>
-	<div class="Pizza" ng-repeat="(key, value) in message.pizza">
-		<blockquote>
-			<h3>{{value.name}}</h3>
-			<p>Ingredients: {{value.ingredients}}<br>
-			<span style="float:right">Price: {{value.price}}</span></p>
-		</blockquote>
-		<br>
-	</div>
-	<b>Pasta</b><br>
-	<div class="Pasta" ng-repeat="(key, value) in message.pasta">
-		<blockquote>
-			<h3>{{value.name}}</h3>
-			<p>Ingredients: {{value.ingredients}}<br>
-			<span style="float:right">Price: {{value.price}}</span></p>
-		</blockquote>
-		<br>
-	</div>
+	<p>{{message.book_description}}</p>
 </div>

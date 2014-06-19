@@ -5,70 +5,22 @@
         "author": "Stanislav Grof",
         "cover": "http://www.bethsteffel.com/images/SteffelPrintDesign_f06.gif",
         "author_description": "The Praga guy",
-        "book_description": "The book of the Praga guy",
-        "best": [{
-            "name":"pizza 1",
-            "ingredients":"one, two, three",
-            "price":"9.00 USD"
-        },
-        {
-            "name":"pizza 2",
-            "ingredients":" xy x",
-            "price":"9"
-        }],
-        "pizza": [{
-            "name":"Pizza Prosciuto",
-            "ingredients":"one one one",
-            "price":"10.00 USD"
-        }],
-        "pasta": [{
-            "name": "Spaghetti All Arabiatello",
-            "ingredients": "pasta faina",
-            "price": "8.00 USD"
-        }]
+        "book_description": "The book of the Praga guy"
     },
     {
         "id": 1,
         "name": "Second Book",
         "author": "Jean Clemente",
         "cover": "http://37.media.tumblr.com/tumblr_lupfgj9s1j1qbycdbo1_500.jpg",
-        "phone": "+40 743 105 932",
-        "best": [{
-            "name":"pizza 1",
-            "ingredients":"one, two, three",
-            "price":"9.00 USD"
-        }],
-        "pizza": [{
-            "name":"Pizza Prosciuto",
-            "ingredients":"one one one",
-            "price":"10.00 USD"
-        }],
-        "pasta": [{
-            "name": "Spaghetti All Arabiatello",
-            "ingredients": "pasta faina",
-            "price": "8.00 USD"
-        }]
+        "author_description": "The Praga guy",
+        "book_description": "The book of the Praga guy"
     },
     {
         "id": 2,
         "name": "Third Book",
         "author": "X Dorsay",
         "cover": "http://img2.wikia.nocookie.net/__cb20140118054532/disney/images/1/16/More_Jungle_Book_Record_Cover.jpg",
-        "phone": "+40 743 105 932",
-        "best": [{
-            "name":"pizza 1",
-            "ingredients":"one, two, three",
-            "price":"9.00 USD"
-        }],
-        "pizza": [{
-            "name":"Pizza Prosciuto",
-            "ingredients":"one one one",
-            "price":"10.00 USD"
-        }],
-        "pasta": [{
-            "name": "Spaghetti All Arabiatello",
-            "ingredients": "pasta faina",
-            "price": "8.00 USD"
-        }]
+        "author_description": "The Praga guy",
+        "book_description": "The book of the Praga guy"
     }
 ]
