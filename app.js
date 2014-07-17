@@ -3,15 +3,23 @@ var app = express();
 
 // Declare variables
 var fs = require('fs'),
-    obj
+    obj,
+    auth
 
 // Read the file and send to the callback
 fs.readFile(__dirname + '/books.json', handleFile)
+fs.readFile(__dirname + '/authors.json', authFile)
 
 // Write the callback function
 function handleFile(err, data) {
     if (err) throw err
     obj = JSON.parse(data)
+}
+
+// Write the callback function
+function authFile(err, data) {
+    if (err) throw err
+    auth = JSON.parse(data)
 }
 
 app.use("/SPA", express.static(__dirname + '/SPA'));
@@ -39,8 +47,14 @@ app.get('/rest/:id', function(req, res) {
     return res.send('Error 404: No book found');
   }
 
-  var q = obj[req.params.id];
-  res.json(q);
+  var initial = obj[req.params.id];
+  var q = obj[req.params.id].author;
+  var z = auth[q].name;
+  var c = auth[q].author;
+  initial.description = z;
+  initial.auth_name = c;
+  json = JSON.stringify(initial);
+  res.send(json);
 });
 
 app.listen(process.env.PORT || 8003);

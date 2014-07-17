@@ -1,0 +1,17 @@
+[
+    {
+        "id": 0,
+        "name": "description of author here",
+        "author": "Stanislav Grof"
+    },
+    {
+        "id": 1,
+        "name": "Second Book",
+        "author": "Jean Clemente"
+    },
+    {
+        "id": 2,
+        "name": "Third Book",
+        "author": "X Dorsay"
+    }
+]
