@@ -1,17 +1,17 @@
 [
     {
         "id": 0,
-        "name": "description of author here",
+        "description": "description of author here. The Praga guy lived in the 19th century and so on",
         "author": "Stanislav Grof"
     },
     {
         "id": 1,
-        "name": "Second Book",
+        "description": "Jean Clemente is recognized by his books",
         "author": "Jean Clemente"
     },
     {
         "id": 2,
-        "name": "Third Book",
+        "decription": "X Dorsay, despite the fact there are no translated books he is looking for translators",
         "author": "X Dorsay"
     }
 ]

@@ -32,7 +32,18 @@ app.get('/', checkForMobile, function(req,res) {
 });
 
 app.get('/rest', function(req, res) {
-  res.json(obj);
+  var scope = [];
+for(var i = 0; i < obj.length; i++) {
+    var initial = obj[i];
+    var q = obj[i].author;
+    var z = auth[q].description;
+    var c = auth[q].author;
+    initial.auth_description = z;
+    initial.auth_name = c;
+//    json = JSON.stringify(initial);
+    scope.push(initial);
+  }
+  res.send(scope);
 });
 
 app.get('/rest/random', function(req, res) {
@@ -49,7 +60,7 @@ app.get('/rest/:id', function(req, res) {
 
   var initial = obj[req.params.id];
   var q = obj[req.params.id].author;
-  var z = auth[q].name;
+  var z = auth[q].description;
   var c = auth[q].author;
   initial.description = z;
   initial.auth_name = c;

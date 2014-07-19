@@ -4,23 +4,20 @@
         "name": "Book 1",
         "author": 0,
         "cover": "http://www.bethsteffel.com/images/SteffelPrintDesign_f06.gif",
-        "author_description": "The Praga guy",
-        "book_description": "The book of the Praga guy"
+        "book_description": "The book description"
     },
     {
         "id": 1,
-        "name": "Book 1",
-        "author": 0,
+        "name": "Book 2",
+        "author": 1,
         "cover": "http://www.bethsteffel.com/images/SteffelPrintDesign_f06.gif",
-        "author_description": "The Praga guy",
-        "book_description": "The book of the Praga guy"
+        "book_description": "Second book description"
     },
     {
         "id": 2,
-        "name": "Book 1",
-        "author": 0,
+        "name": "Book 3",
+        "author": 1,
         "cover": "http://www.bethsteffel.com/images/SteffelPrintDesign_f06.gif",
-        "author_description": "The Praga guy",
-        "book_description": "The book of the Praga guy"
+        "book_description": "Third book description"
     }
 ]
