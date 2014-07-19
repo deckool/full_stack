@@ -1,23 +1,23 @@
 [
     {
         "id": 0,
-        "name": "Book 1",
+        "name": "A passage to India",
         "author": 0,
-        "cover": "http://www.bethsteffel.com/images/SteffelPrintDesign_f06.gif",
-        "book_description": "The book description"
+        "cover": "http://www.sonlight.com/images/products/530-49-l.jpg",
+        "book_description": "A Passage to India (1924) is a novel by English author E. M. Forster set against the backdrop of the British Raj and the Indian independence movement in the 1920s. It was selected as one of the 100 great works of English literature by the Modern Library and won the 1924 James Tait Black Memorial Prize for fiction. Time magazine included the novel in its \"100 Best English-language Novels from 1923 to 2005\".[1] The novel is based on Forster's experiences in India. E.M. Forster borrowed the book's title from Walt Whitman's poem of the same name in Leaves of Grass."
     },
     {
         "id": 1,
-        "name": "Book 2",
+        "name": "The Japanese Chronicles",
         "author": 1,
-        "cover": "http://www.bethsteffel.com/images/SteffelPrintDesign_f06.gif",
-        "book_description": "Second book description"
+        "cover": "http://d.gr-assets.com/books/1387732740l/971901.jpg",
+        "book_description": "Based on three decades of travel throughout Japan, collects the author's recollections and views on life in the Land of the Rising Sun."
     },
     {
         "id": 2,
-        "name": "Book 3",
+        "name": "The Way of the World",
         "author": 1,
-        "cover": "http://www.bethsteffel.com/images/SteffelPrintDesign_f06.gif",
-        "book_description": "Third book description"
+        "cover": "http://assets.nybooks.com/media/img/books/9781590173220_jpg_200x450_q85.jpg",
+        "book_description": "it’s about a journey in the 1950s from Belgrade to India. They try to go to India in a tiny battered Fiat and it takes them several years, these friends, and it probably describes the attraction of travel better than any book I’ve ever read."
     }
 ]

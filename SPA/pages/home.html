@@ -7,7 +7,7 @@
       <!--Body content-->
 
       <ul class="books">
-        <li ng-repeat="message in messages | filter:query" class="thumbnail">
+        <li ng-repeat="message in messages | filter:query">
           <a href="#about/{{ $index }}"><img class="thumb" ng-src="{{ message.cover }}"></a>
           <h3><a href="#about/{{ $index }}">{{ message.name }}</a></h3>
           <b><span>By:</span> {{ message.auth_name }}</b>

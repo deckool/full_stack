@@ -1,14 +1,14 @@
 [
     {
         "id": 0,
-        "description": "description of author here. The Praga guy lived in the 19th century and so on",
-        "author": "Stanislav Grof",
+        "description": "Edward Morgan Forster OM, CH (1 January 1879 – 7 June 1970) was an English novelist, short story writer, essayist and librettist. He is known best for his ironic and well-plotted novels examining class difference and hypocrisy in early 20th-century British society. Forster's humanistic impulse toward understanding and sympathy may be aptly summed up in the epigraph to his 1910 novel Howards End: \"Only connect ... \". His 1908 novel, A Room with a View, is his most optimistic work, while A Passage to India (1924) brought him his greatest success.",
+        "author": "E.M.Forster",
         "image": "http://news.nationalgeographic.com/news/2007/04/images/070412-square-nebula.jpg"
     },
     {
         "id": 1,
-        "description": "Jean Clemente is recognized by his books",
-        "author": "Jean Clemente",
+        "description": "Nicolas Bouvier (March 6, 1929, Lancy - February 17, 1998) was a 20th-century Swiss traveller, writer, icon painter and photographer.",
+        "author": "Nicolas Bouvier",
         "image": "http://upload.wikimedia.org/wikipedia/commons/f/f7/Missing_square.gif"
     },
     {

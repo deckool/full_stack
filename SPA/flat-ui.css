@@ -12,8 +12,7 @@
 
 .books li {
   clear: both;
-  height: 115px;
-  padding-top: 15px;
+  padding:10px;
 }
 
 .breadcrumb {

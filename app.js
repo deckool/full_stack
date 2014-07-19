@@ -6,10 +6,6 @@ var fs = require('fs'),
     obj,
     auth
 
-// Read the file and send to the callback
-fs.readFile(__dirname + '/books.json', handleFile)
-fs.readFile(__dirname + '/authors.json', authFile)
-
 // Write the callback function
 function handleFile(err, data) {
     if (err) throw err
@@ -29,6 +25,9 @@ app.use(express.bodyParser());
 app.get('/', checkForMobile, function(req,res) {
   res.sendfile('SPA/desktop.html');
   console.log(':)');
+  // Read the file and send to the callback
+  fs.readFile(__dirname + '/books.json', handleFile)
+  fs.readFile(__dirname + '/authors.json', authFile)
 });
 
 app.get('/rest', function(req, res) {
