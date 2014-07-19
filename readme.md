@@ -12,6 +12,6 @@ Angular + NodeJS + Ionic using REST
 
 `nodemon app.js`
 
-now browse to [](http://localhost:8003 "localhost") and you should see the listing.
+now browse to [localhost:8003](http://localhost:8003 "localhost") and you should see the listing.
 
 In the `app.js` you will also find the mobile detector using HTTP header information, then routing to the specified file to ebgin with.
