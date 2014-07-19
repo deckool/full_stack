@@ -10,7 +10,7 @@
         <li ng-repeat="message in messages | filter:query">
           <a href="#about/{{ $index }}"><img class="thumb" ng-src="{{ message.cover }}"></a>
           <h3><a href="#about/{{ $index }}">{{ message.name }}</a></h3>
-          <b><span>By:</span> {{ message.auth_name }}</b>
+          <b><span>By:</span> {{ message.auth_name }} {{ message.books.length }}</b> - <code ng-repeat="books in message.books">{{ books }}</code>
           <p><span>Description:</span> {{ message.book_description }}</p>
         </li>
       </ul>

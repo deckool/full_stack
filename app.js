@@ -32,6 +32,7 @@ app.get('/', checkForMobile, function(req,res) {
 
 app.get('/rest', function(req, res) {
   var scope = [];
+  var books = [];
 for(var i = 0; i < obj.length; i++) {
     var initial = obj[i];
     var q = obj[i].author;
@@ -39,6 +40,7 @@ for(var i = 0; i < obj.length; i++) {
     var c = auth[q].author;
     initial.auth_description = z;
     initial.auth_name = c;
+    initial.books = getCount(q);
 //    json = JSON.stringify(initial);
     scope.push(initial);
   }
@@ -96,4 +98,14 @@ function checkForMobile(req, res, next) {
     // if we didn't detect mobile, call the next method, which will eventually call the desktop route
     return next();
   }
+}
+
+function getCount(x) {
+    var count = [];
+    for (var i = 0; i < obj.length; i++) {
+        if (obj[i].author === x) {
+            count.push(obj[i].name);
+        }
+    }
+    return count;
 }
