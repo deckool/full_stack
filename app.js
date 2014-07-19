@@ -59,11 +59,13 @@ app.get('/rest/:id', function(req, res) {
   }
 
   var initial = obj[req.params.id];
-  var q = obj[req.params.id].author;
-  var z = auth[q].description;
-  var c = auth[q].author;
-  initial.description = z;
-  initial.auth_name = c;
+  var int = obj[req.params.id].author;
+  var descr = auth[int].description;
+  var name = auth[int].author;
+  var img = auth[int].image;
+  initial.auth_description = descr;
+  initial.auth_name = name;
+  initial.auth_image = img;
   json = JSON.stringify(initial);
   res.send(json);
 });

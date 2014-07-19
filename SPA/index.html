@@ -45,7 +45,7 @@
             <a class="item item-thumbnail-left" href="#/tab/facts/{{ $index }}">
               <img src="{{ message.cover }}">
               <h2>{{ message.name }}</h2>
-              <p>{{ message.author }},{{ message.cover }}<br>{{ message.phone }}</p>
+              <p>{{ message.auth_name }}<br>{{ message.book_description }}</p>
             </a>
           </div>
         </ion-content>
@@ -65,9 +65,9 @@
               </p>
             </div>
             <div class="item item-avatar">
-              <img src="https://pbs.twimg.com/profile_images/3564809552/01f9e3e0c05e9a917a3c20b529d8d5b0_400x400.jpeg">
-              <h2>{{ message.author }}</h2>
-              <p>{{ message.phone }}</p>
+              <img src="{{ message.auth_image }}">
+              <h2>{{ message.auth_name }}</h2>
+              <p>{{ message.auth_description }}</p>
             </div>
           </div>
         </ion-content>

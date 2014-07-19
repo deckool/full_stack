@@ -71,7 +71,7 @@ booksApp.config(function($stateProvider, $urlRouterProvider) {
   // create the controller and inject Angular's $scope
 booksApp.controller('HomeTabCtrl', function($scope, $http) {
   // create a message to display in our view
-  $http({method: 'GET', url: 'http://localhost:3412/rest'}).
+  $http({method: 'GET', url: 'http://localhost:8003/rest'}).
     success(function(data, status, headers, config) {
        $scope.messages = data;
     }).
@@ -80,7 +80,7 @@ booksApp.controller('HomeTabCtrl', function($scope, $http) {
 });
 
 booksApp.controller('AboutController', function($scope,$http,$stateParams) {
-  $http({method: 'GET', url: 'http://localhost:3412/rest/'+$stateParams.restId}).
+  $http({method: 'GET', url: 'http://localhost:8003/rest/'+$stateParams.restId}).
     success(function(data, status, headers, config) {
       $scope.message = data;
       console.log(data);

@@ -2,16 +2,19 @@
     {
         "id": 0,
         "description": "description of author here. The Praga guy lived in the 19th century and so on",
-        "author": "Stanislav Grof"
+        "author": "Stanislav Grof",
+        "image": "http://news.nationalgeographic.com/news/2007/04/images/070412-square-nebula.jpg"
     },
     {
         "id": 1,
         "description": "Jean Clemente is recognized by his books",
-        "author": "Jean Clemente"
+        "author": "Jean Clemente",
+        "image": "http://upload.wikimedia.org/wikipedia/commons/f/f7/Missing_square.gif"
     },
     {
         "id": 2,
         "decription": "X Dorsay, despite the fact there are no translated books he is looking for translators",
-        "author": "X Dorsay"
+        "author": "X Dorsay",
+        "image": "http://mathworld.wolfram.com/images/eps-gif/MagicSquareDoublyEven_1000.gif"
     }
 ]
